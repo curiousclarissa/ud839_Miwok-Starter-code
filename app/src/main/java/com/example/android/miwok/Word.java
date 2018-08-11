@@ -7,12 +7,16 @@ import android.media.Image;
  */
 
 public class Word {
+    /**
+     * CONSTANT value that represents when no images is provided to view
+     */
+    private static final int NO_IMAGE_PROVIDED = -1;
     //default translation for the word
     private String mDefaultTranslation;
     //miwok translation for the word
     private String mMiwokTranslation;
-    //image resource id
-    private int mImageResourceId;
+    //image resource id for word
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
 
     /**
      * @param defaultTranslation is the word the user natively speaks
@@ -50,5 +54,11 @@ public class Word {
      */
     public int getImageResourceId(){
         return mImageResourceId;
+    }
+    /**
+     * Returns whether or not there is an image for this word.
+     */
+    public boolean hasImage() {
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }
