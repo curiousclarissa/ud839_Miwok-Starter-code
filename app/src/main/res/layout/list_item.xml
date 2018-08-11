@@ -13,23 +13,27 @@
         android:src="@mipmap/ic_launcher" />
 
     <LinearLayout
+        android:id="@+id/text_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/category_numbers"
         android:orientation="vertical"
         android:paddingLeft="16dp">
 
         <TextView
             android:id="@+id/miwok_text_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
             android:textColor="@color/category_name_text"
             android:textSize="@dimen/miwok_translation_text_size"
             tools:text="lutti"/>
         <TextView
             android:id="@+id/default_text_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
             android:textColor="@color/category_name_text"
             android:textSize="@dimen/default_translation_textSize"
             tools:text="one" />
